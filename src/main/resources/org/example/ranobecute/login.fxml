@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.LoginController">
+   <children>
+      <AnchorPane prefHeight="119.0" prefWidth="800.0" style="-fx-background-color: #fcf0db;">
+         <children>
+            <Label layoutX="500.0" layoutY="48.0" style="-fx-font-weight: bold;" text="Welcome :3" textFill="#c9ae91">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="119.0" fitWidth="123.0" layoutX="683.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/org/example/ranobecute/assets/login_daco_eat.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="500.0" prefWidth="344.0" style="-fx-background-color: #FEDBD0;">
+         <children>
+            <ImageView fitHeight="83.0" fitWidth="86.0" layoutX="41.0" layoutY="80.0">
+               <image>
+                  <Image url="@../../../../java/org/example/ranobecute/assets/logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="#442c2e" layoutX="117.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RanobeCute">
+               <font>
+                  <Font name="Calibri Light" size="34.0" />
+               </font>
+            </Text>
+            <Text fill="#442c2e" layoutX="59.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In this world where miracles are intertwined with our aspirations, your dream is already &#10;taking off like a star in heaven." wrappingWidth="265.453125">
+               <font>
+                  <Font name="Calibri Light" size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="59.0" layoutY="315.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: transparent; -fx-border-color: #ff8a95; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign up" textFill="#ff8a95">
+               <font>
+                  <Font name="Calibri Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="#ff8a95" layoutX="293.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#442c2e" layoutX="89.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Click &#10;the cute button below! (｡•̀ᴗ-)✧" textAlignment="CENTER" wrappingWidth="194.951171875" />
+         </children>
+      </AnchorPane>
+      <TextField layoutX="445.0" layoutY="184.0" prefHeight="38.0" prefWidth="255.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
+      <PasswordField layoutX="445.0" layoutY="261.0" prefHeight="38.0" prefWidth="255.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
+      <FontAwesomeIcon fill="#ff8a95" glyphName="USER" layoutX="419.0" layoutY="210.0" size="20" />
+      <FontAwesomeIcon fill="#ff8a95" glyphName="LOCK" layoutX="420.0" layoutY="287.0" size="20" />
+      <Button layoutX="445.0" layoutY="362.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fill="WHITE" layoutX="674.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+         <font>
+            <Font name="Leelawadee UI" size="20.0" />
+         </font>
+      </Text>
+      <CheckBox layoutX="445.0" layoutY="322.0" mnemonicParsing="false" text="Remember me ヽ(・∀・)" textFill="#ff8a95">
+         <font>
+            <Font name="Calibri" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </CheckBox>
+   </children>
+</AnchorPane>
