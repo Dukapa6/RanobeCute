@@ -24,29 +24,29 @@
             </Label>
             <ImageView fitHeight="119.0" fitWidth="123.0" layoutX="683.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/org/example/ranobecute/assets/login_daco_eat.png" />
+                  <Image url="@../../../img/login_daco_eat.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="500.0" prefWidth="344.0" style="-fx-background-color: #FEDBD0;">
+      <AnchorPane prefHeight="500.0" prefWidth="344.0" style="-fx-background-color: #eb86a4;">
          <children>
-            <ImageView fitHeight="83.0" fitWidth="86.0" layoutX="41.0" layoutY="80.0">
+            <ImageView fitHeight="83.0" fitWidth="86.0" layoutX="129.0" layoutY="46.0" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/org/example/ranobecute/assets/logo.png" />
+                  <Image url="@../../../img/logoBekaLoh2.png" />
                </image>
             </ImageView>
-            <Text fill="#442c2e" layoutX="117.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RanobeCute">
+            <Text fill="WHITE" layoutX="88.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RanobeCute">
                <font>
-                  <Font name="Calibri Light" size="34.0" />
+                  <Font name="Webdings" size="34.0" />
                </font>
             </Text>
-            <Text fill="#442c2e" layoutX="59.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In this world where miracles are intertwined with our aspirations, your dream is already &#10;taking off like a star in heaven." wrappingWidth="265.453125">
+            <Text fill="WHITE" layoutX="59.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In this world where miracles are intertwined with our aspirations, your dream is already &#10;taking off like a star in heaven." wrappingWidth="265.453125">
                <font>
-                  <Font name="Calibri Light" size="14.0" />
+                  <Font name="Microsoft YaHei Light" size="14.0" />
                </font>
             </Text>
-            <Button layoutX="59.0" layoutY="315.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: transparent; -fx-border-color: #ff8a95; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign up" textFill="#ff8a95">
+            <Button fx:id="signUpButton" layoutX="48.0" layoutY="313.0" mnemonicParsing="false" onAction="#switchToRegister" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: transparent; -fx-border-color: #fafafa; -fx-border-radius: 10; -fx-background-radius: 10;" text="Sign up" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="20.0" />
                </font>
@@ -54,19 +54,19 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Text fill="#ff8a95" layoutX="293.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+            <Text fill="WHITE" layoutX="283.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
                <font>
                   <Font name="Leelawadee UI" size="20.0" />
                </font>
             </Text>
-            <Text fill="#442c2e" layoutX="89.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Click &#10;the cute button below! (｡•̀ᴗ-)✧" textAlignment="CENTER" wrappingWidth="194.951171875" />
+            <Text fill="WHITE" layoutX="75.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account? Click &#10;the cute button below! (｡•̀ᴗ-)✧" textAlignment="CENTER" wrappingWidth="194.951171875" />
          </children>
       </AnchorPane>
-      <TextField layoutX="445.0" layoutY="184.0" prefHeight="38.0" prefWidth="255.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
-      <PasswordField layoutX="445.0" layoutY="261.0" prefHeight="38.0" prefWidth="255.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
+      <TextField fx:id="usernameField" layoutX="445.0" layoutY="184.0" prefHeight="38.0" prefWidth="255.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
+      <PasswordField fx:id="passwordField" layoutX="445.0" layoutY="261.0" prefHeight="38.0" prefWidth="255.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
       <FontAwesomeIcon fill="#ff8a95" glyphName="USER" layoutX="419.0" layoutY="210.0" size="20" />
       <FontAwesomeIcon fill="#ff8a95" glyphName="LOCK" layoutX="420.0" layoutY="287.0" size="20" />
-      <Button layoutX="445.0" layoutY="362.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
+      <Button fx:id="signInButton" layoutX="445.0" layoutY="362.0" mnemonicParsing="false" onAction="#Authorization" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Sign in" textFill="WHITE">
          <font>
             <Font name="Calibri Light" size="20.0" />
          </font>

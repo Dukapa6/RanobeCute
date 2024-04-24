@@ -9,34 +9,80 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.RegisterController">
     <children>
+      <AnchorPane layoutY="112.0" prefHeight="281.0" prefWidth="800.0" style="-fx-background-color: #fdcfcb;">
+         <children>
+            <ImageView fitHeight="251.0" fitWidth="364.0" layoutX="436.0" layoutY="30.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/background.png" />
+               </image>
+            </ImageView>
+            <FontAwesomeIcon fill="#fffef9" glyphName="ENVELOPE" layoutX="59.0" layoutY="189.0" size="20" text="" />
+         </children></AnchorPane>
         <AnchorPane prefHeight="119.0" prefWidth="800.0" style="-fx-background-color: #fcf0db;">
             <children>
-                <Label layoutX="189.0" layoutY="42.0" style="-fx-font-weight: bold;" text="⋆⭒˚.⋆Dreams come true here⋆⭒˚.⋆" textFill="#c9ae91">
+                <Label layoutX="189.0" layoutY="42.0" style="-fx-font-weight: bold;" text="⋆⭒˚.⋆Dreams come true here⋆⭒˚.⋆">
                     <font>
                         <Font name="Calibri" size="30.0" />
                     </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.75" green="0.6590277552604675" blue="0.2951388955116272" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.75" green="0.6590277552604675" blue="0.2951388955116272" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9736841917037964" green="0.6040448546409607" blue="0.9367202520370483" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
                 </Label>
-                <ImageView fitHeight="119.0" fitWidth="123.0" layoutX="683.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="78.0" fitWidth="93.0" layoutX="646.0" layoutY="22.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.7" pickOnBounds="true">
                     <image>
-                        <Image url="@../../../../java/org/example/ranobecute/assets/login_daco_eat.png" />
+                        <Image url="@../../../img/bearregister.png" />
                     </image>
                 </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="115.0" layoutX="58.0" layoutY="2.0" opacity="0.82" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/bearregister1.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
-        <TextField layoutX="87.0" layoutY="193.0" prefHeight="38.0" prefWidth="255.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
-        <PasswordField layoutX="433.0" layoutY="193.0" prefHeight="38.0" prefWidth="255.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
-        <FontAwesomeIcon fill="#ff8a95" glyphName="USER" layoutX="61.0" layoutY="219.0" size="20" />
-        <FontAwesomeIcon fill="#ff8a95" glyphName="LOCK" layoutX="408.0" layoutY="219.0" size="20" />
-      <FontAwesomeIcon fill="#ff8a95" glyphName="ENVELOPE" layoutX="61.0" layoutY="300.0" size="20" text="" />
-      <TextField layoutX="88.0" layoutY="275.0" prefHeight="38.0" prefWidth="255.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #f8ced7;" />
-      <AnchorPane layoutY="378.0" prefHeight="119.0" prefWidth="800.0" style="-fx-background-color: #fcf0db;">
+        <TextField fx:id="userNameField" layoutX="87.0" layoutY="193.0" prefHeight="38.0" prefWidth="255.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #fffef9; -fx-prompt-text-fill: #fffef9; -fx-text-fill: #fffef9;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <PasswordField fx:id="passwordField" layoutX="433.0" layoutY="193.0" prefHeight="38.0" prefWidth="255.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #fffef9; -fx-prompt-text-fill: #fffef9; -fx-text-fill: #fffef9;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></PasswordField>
+      <TextField fx:id="emailField" layoutX="88.0" layoutY="275.0" prefHeight="38.0" prefWidth="255.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #fffef9; -fx-prompt-text-fill: #fffef9; -fx-text-fill: #fffef9;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+        <FontAwesomeIcon fill="#fffef9" glyphName="USER" layoutX="61.0" layoutY="219.0" size="20" />
+        <FontAwesomeIcon fill="#fffef9" glyphName="LOCK" layoutX="408.0" layoutY="219.0" size="20" />
+      <AnchorPane layoutY="393.0" prefHeight="107.0" prefWidth="800.0" style="-fx-background-color: #fcf0db;">
          <children>
-              <Button layoutX="432.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Create Account!" textFill="WHITE">
+              <Button fx:id="CreateAccountButton" layoutX="432.0" layoutY="40.0" mnemonicParsing="false" onAction="#singUpButton" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Create Account!" textFill="WHITE">
                   <font>
                       <Font name="Calibri Light" size="20.0" />
                   </font>
@@ -49,7 +95,7 @@
                       <Font name="Leelawadee UI" size="20.0" />
                   </font>
               </Text>
-            <Button layoutX="87.0" layoutY="41.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Back" textFill="WHITE">
+            <Button fx:id="BackButton" layoutX="87.0" layoutY="41.0" mnemonicParsing="false" onAction="#BackScene" prefHeight="20.0" prefWidth="255.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Back" textFill="WHITE">
                <font>
                   <Font name="Calibri Light" size="20.0" />
                </font>
