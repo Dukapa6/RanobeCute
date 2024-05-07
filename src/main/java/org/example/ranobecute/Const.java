@@ -22,4 +22,33 @@ public class Const {
     public static final String NOVEL_TYPE = "type";
     public static final String NOVEL_YEAR = "year";
 
+
+    // Chapters Table
+    public static final String CHAPTERS_TABLE = "chapters";
+    public static final String CHAPTERS_ID = "idchapters";
+    public static final String CHAPTERS_NOVEL_ID = "novel_id";
+    public static final String CHAPTERS_VOLUME_NUMBER = "volume_number";
+    public static final String CHAPTERS_CHAPTER_NUMBER = "chapter_number";
+    public static final String CHAPTERS_TITLE = "title";
+    public static final String CHAPTERS_CONTENT = "content";
+    public static final String CHAPTERS_PATH_TEXT = "pathtext";
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

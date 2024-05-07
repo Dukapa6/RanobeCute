@@ -3,32 +3,23 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="VBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickMouse" prefHeight="255.0" prefWidth="124.0" spacing="2.0" style="-fx-background-color: #ffdef1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.CardControlller">
+<VBox fx:id="VBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#ClickMouse" prefHeight="255.0" prefWidth="124.0" spacing="2.0" style="-fx-background-color: #ffdef1;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.CardControlller">
    <children>
-      <ImageView fx:id="NovelCover" cache="true" fitHeight="180.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="NovelCover" fitHeight="170.0" fitWidth="120.0" pickOnBounds="true">
          <image>
             <Image url="@../../../ranobeimg/The-Demon-Prince-goes-to-the-Academy.jpeg" />
          </image>
          <VBox.margin>
-            <Insets top="10.0" />
+            <Insets left="2.0" top="10.0" />
          </VBox.margin>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
-         <effect>
-            <InnerShadow blurType="TWO_PASS_BOX" choke="0.81" height="23.29" radius="11.184999999999999" width="23.45">
-               <color>
-                  <Color red="1.0" green="0.8705882430076599" blue="0.9450980424880981" />
-               </color>
-            </InnerShadow>
-         </effect>
       </ImageView>
       <Label fx:id="NovelTitle" ellipsisString=".." prefHeight="35.0" prefWidth="130.0" text="Принц Демонов отправляется в Академию (Новелла)" textFill="#c96792" wrapText="true">
          <font>
@@ -38,7 +29,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
          <VBox.margin>
-            <Insets />
+            <Insets top="3.0" />
          </VBox.margin>
       </Label>
       <Label fx:id="NovelType" text="Корея" textFill="#d384a9">
@@ -49,7 +40,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
          <VBox.margin>
-            <Insets left="-87.0" top="-2.0" />
+            <Insets top="-2.0" />
          </VBox.margin>
       </Label>
    </children>

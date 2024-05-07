@@ -57,9 +57,9 @@ public class MenuController {
     }
     @FXML
     void initialize() throws IOException, SQLException, ClassNotFoundException {
-        DatabaseHandler dbhandler = new DatabaseHandler(); // Использовать что бы поставить книги сюда TODO
+        DatabaseHandler dbhandler = new DatabaseHandler();
 
-        ArrayList<Novel> recentlyAdded = new ArrayList<>(recentlyAdded());
+        ArrayList<Novel> recentlyAdded = new ArrayList<>(dbhandler.getAllNovel());
 
         for (int i = 0; i < recentlyAdded.size(); i++){
             FXMLLoader fxmlLoader = new FXMLLoader();
@@ -70,13 +70,6 @@ public class MenuController {
             CardLayoout.getChildren().add(cardBox);
 
         }
-    }
-
-    public List<Novel> recentlyAdded(){
-        List<Novel> ls = new ArrayList<Novel>();
-        ls.add(new Novel("Принц Демонов отправляется в Академию (Новелла)", "src/main/resources/ranobeimg/The-Demon-Prince-goes-to-the-Academy.jpeg", "Корея"));
-        ls.add(new Novel("Я подружился со второй самой привлекательной девушкой в моем классе (WN) (Новелла)", "src/main/resources/ranobeimg/Class_de_2-ban_Me_ni_Kawaii_Onna_no_Ko_to_Tomodachi_ni_Natta_LN_volume_1.png", "Япония"));
-        return ls;
     }
 
 

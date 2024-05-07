@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #eb86a4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.ReadController">
+    <children>
+        <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #eb86a4;">
+            <children>
+                <Button layoutX="636.0" layoutY="16.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Text fill="WHITE" layoutX="669.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Love is magic">
+                    <font>
+                        <Font name="Calibri Italic" size="17.0" />
+                    </font>
+                </Text>
+                <HBox alignment="CENTER_LEFT" layoutY="1.0" onMouseClicked="#LogoClicked" prefHeight="60.0" prefWidth="167.0">
+                    <children>
+                        <ImageView fx:id="logo" fitHeight="44.0" fitWidth="42.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../img/logoBekaLoh2.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="RanobeCute" wrappingWidth="112.6640625">
+                            <font>
+                                <Font name="Webdings" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+            <Label fx:id="ChapterTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="23.0" prefHeight="18.0" prefWidth="113.0" text="Название главы" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+                <Label fx:id="TitleName" layoutX="457.0" layoutY="47.0" prefHeight="28.0" prefWidth="229.0" text="Title name" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </Label>
+            <Text fill="WHITE" layoutX="466.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="325.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;">
+               <font>
+                  <Font name="Leelawadee UI" size="20.0" />
+               </font>
+            </Text>
+            </children>
+        </AnchorPane>
+        <VBox layoutX="116.0" layoutY="73.0" prefHeight="428.0" prefWidth="568.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10;">
+            <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="30000.0" prefWidth="553.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="30000.0" prefWidth="554.0" style="-fx-background-color: #ffdef1;">
+                     <children>
+                        <Label fx:id="Content" alignment="TOP_LEFT" layoutX="6.0" layoutY="10.0" prefHeight="30000.0" prefWidth="530.0" text="Content" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            </children>
+            <padding>
+                <Insets left="15.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -110,6 +110,20 @@ public class AddNovelController {
                     StatusComboBox.getSelectionModel().getSelectedItem(), "src/main/resources/ranobeimg/" + TitleField.getText() + ".png",
                     TypeComboBox.getSelectionModel().getSelectedItem(), YearField.getText());
             dbHandler.CreateNovel(novel);
+
+            Stage stage1 = (Stage) CreateButton.getScene().getWindow();
+            stage1.close();
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("menu.fxml"));
+
+            loader.load();
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Menu | RanobeCute");
+            stage.show();
         }
     }
 

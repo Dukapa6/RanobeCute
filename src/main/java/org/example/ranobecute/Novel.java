@@ -10,8 +10,22 @@ public class Novel {
     private String image;
     private String type;
     private String year;
+    private int chapters;
 
     public Novel() {
+    }
+
+    public Novel(int idNovel, String title, String author, String genre, String description, String status, String image, String type, String year, int chapters) {
+        this.idNovel = idNovel;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.description = description;
+        this.status = status;
+        this.image = image;
+        this.type = type;
+        this.year = year;
+        this.chapters = chapters;
     }
 
     public Novel(String title, String author, String genre, String description, String status, String image, String type, String year) {
@@ -24,6 +38,8 @@ public class Novel {
         this.type = type;
         this.year = year;
     }
+
+
 
     public Novel(String title, String image, String type) {
         this.title = title;
@@ -101,6 +117,14 @@ public class Novel {
 
     public void setYear(String year) {
         this.year = year;
+    }
+
+    public int getChapters() {
+        return chapters;
+    }
+
+    public void setChapters(int chapters) {
+        this.chapters = chapters;
     }
 
     @Override

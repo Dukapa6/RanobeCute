@@ -1,10 +1,15 @@
 package org.example.ranobecute;
 
-import java.io.IOException;
+import java.io.*;
+import java.net.Socket;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.Scanner;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,32 +53,34 @@ public class LoginController {
     }
 
     private void loginUser(String username, String password) throws SQLException, IOException {
-        DatabaseHandler dbhandler = new DatabaseHandler();
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        ResultSet result = dbhandler.getUser(user);
 
-        int counter = 0;
-        while( result.next() ){
-            counter++;
-            break;
-        }
-        if( counter == 1 ){
-            System.out.println("Success!");
-            Stage stage1 = (Stage) signUpButton.getScene().getWindow();
-            stage1.close();
+        // Socket and Threads
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("menu.fxml"));
+        try{
+            Socket socket = new Socket("127.0.0.1", 444);
+            ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
 
-            loader.load();
+            outputStream.writeObject(new String[]{"Login",username,password} );
+            ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
+            String s = (String) inputStream.readObject();
+            if( s.equals("1") ){
+                System.out.println("Success!");
+                Stage stage1 = (Stage) signUpButton.getScene().getWindow();
+                stage1.close();
 
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu | RanobeCute");
-            stage.show();
+                FXMLLoader loader = new FXMLLoader();
+                loader.setLocation(getClass().getResource("menu.fxml"));
+
+                loader.load();
+
+                Parent root = loader.getRoot();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Menu | RanobeCute");
+                stage.show();
+            }
+        }catch (Exception e){
+            System.out.println("Eror connection!");
         }
     }
 

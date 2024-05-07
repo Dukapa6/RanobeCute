@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #ffecf7;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ranobecute.AddChapterController">
+    <children>
+        <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #eb86a4;">
+            <children>
+                <Button layoutX="636.0" layoutY="16.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: transparent;" text="+" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <FontAwesomeIcon fill="WHITE" glyphName="SEARCH" layoutX="263.0" layoutY="35.0" size="15">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </FontAwesomeIcon>
+                <TextField layoutX="288.0" layoutY="19.0" prefHeight="25.0" prefWidth="225.0" promptText="Search..." style="-fx-background-radius: 10;">
+                    <font>
+                        <Font name="Calibri Bold Italic" size="12.0" />
+                    </font>
+                </TextField>
+                <Text fill="WHITE" layoutX="669.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Love is magic">
+                    <font>
+                        <Font name="Calibri Italic" size="17.0" />
+                    </font>
+                </Text>
+                <HBox alignment="CENTER_LEFT" layoutY="1.0" onMouseClicked="#LogoClicked" prefHeight="60.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="logo" fitHeight="44.0" fitWidth="42.0" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../img/logoBekaLoh2.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="RanobeCute">
+                            <font>
+                                <Font name="Webdings" size="22.0" />
+                            </font>
+                        </Text>
+                    </children>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+            </children>
+        </AnchorPane>
+          <VBox layoutX="116.0" layoutY="73.0" prefHeight="428.0" prefWidth="568.0" spacing="5.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10;">
+              <children>
+                  <Label fx:id="TitleName" text="Title name">
+                      <font>
+                          <Font name="Calibri Bold" size="15.0" />
+                      </font>
+                      <cursor>
+                          <Cursor fx:constant="DEFAULT" />
+                      </cursor>
+                  </Label>
+            <Label text="Adding chapters">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="35.0" prefWidth="553.0">
+                      <VBox.margin>
+                          <Insets top="10.0" />
+                      </VBox.margin>
+               <children>
+                  <TextField fx:id="VolumeField" prefHeight="25.0" prefWidth="58.0" promptText="Том" />
+                  <TextField fx:id="ChapterField" prefHeight="25.0" prefWidth="58.0" promptText="Глава" />
+                  <TextField fx:id="NameField" prefHeight="25.0" prefWidth="248.0" promptText="Название главы">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                        <Button fx:id="CreateButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#AddChapter" prefHeight="14.0" prefWidth="67.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 5;" text="Create" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="13.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                        </Button>
+               </children>
+                  </HBox>
+                  <TextArea fx:id="ContentField" maxWidth="541.0" prefHeight="310.0" prefWidth="523.0" promptText="Содержание главы..." wrapText="true">
+               <VBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </VBox.margin>
+            </TextArea>
+              </children>
+              <padding>
+                  <Insets left="15.0" top="15.0" />
+              </padding>
+          </VBox>
+    </children>
+</AnchorPane>

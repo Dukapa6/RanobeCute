@@ -91,12 +91,12 @@
                               <Font size="7.0" />
                            </font>
                            <HBox.margin>
-                              <Insets left="10.0" top="6.0" />
+                              <Insets left="10.0" top="7.0" />
                            </HBox.margin>
                         </FontAwesomeIcon>
-                        <Button mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Читать" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#ReadNovel" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Читать" textFill="WHITE">
                            <font>
-                              <Font name="Calibri Light" size="15.0" />
+                              <Font name="Calibri" size="15.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -106,6 +106,32 @@
                            </HBox.margin>
                         </Button>
                      </children>
+                  </HBox>
+                  <HBox prefHeight="32.0" prefWidth="240.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PLUS" size="1.5em">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="8.0" />
+                           </HBox.margin>
+                        </FontAwesomeIcon>
+                        <Button mnemonicParsing="false" onAction="#AddChapterNovel" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #ff8a95; -fx-background-radius: 10;" text="Добавить главы" textFill="WHITE">
+                           <font>
+                              <Font name="Calibri Light" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="5.0" right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="35.0" right="35.0" top="10.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
@@ -124,7 +150,7 @@
                   </Label>
                   <VBox prefHeight="365.0" prefWidth="440.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10;">
                      <children>
-                        <Label fx:id="NovelTitle1" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Описание" textFill="#c96792" wrapText="true">
+                        <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Описание" textFill="#c96792" wrapText="true">
                            <font>
                               <Font name="Arial Black" size="12.0" />
                            </font>
@@ -135,7 +161,7 @@
                               <Insets left="10.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label fx:id="NovelType" alignment="TOP_LEFT" prefHeight="100.0" prefWidth="420.0" text="Кажется, я стал Принцем Демонов. Всё бы ничего, но только мой папаша, Король Демонов, мёртв, остальные демоны повержены в главной схватке, а я не наделён никакими могущественными силами, которые были у моего папочки. И как мне выжить в таких условиях?" textAlignment="JUSTIFY" textFill="#d384a9" wrapText="true">
+                        <Label fx:id="NovelDescription" alignment="TOP_LEFT" prefHeight="119.0" prefWidth="420.0" text="Кажется, я стал Принцем Демонов. Всё бы ничего, но только мой папаша, Король Демонов, мёртв, остальные демоны повержены в главной схватке, а я не наделён никакими могущественными силами, которые были у моего папочки. И как мне выжить в таких условиях?" textAlignment="JUSTIFY" textFill="#d384a9" wrapText="true">
                            <font>
                               <Font name="Arial Bold" size="12.0" />
                            </font>
@@ -146,9 +172,9 @@
                               <Insets left="10.0" right="10.0" top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffc7e7; -fx-background-radius: 10;">
+                        <VBox prefHeight="154.0" prefWidth="400.0" style="-fx-background-color: #ffc7e7; -fx-background-radius: 10;">
                            <VBox.margin>
-                              <Insets left="20.0" right="20.0" />
+                              <Insets left="20.0" right="20.0" top="20.0" />
                            </VBox.margin>
                            <children>
                               <HBox prefHeight="59.0" prefWidth="380.0">
@@ -158,7 +184,7 @@
                                  <children>
                                     <VBox prefHeight="59.0" prefWidth="159.0">
                                        <children>
-                                          <Label fx:id="NovelTitle11" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Автор" textFill="#c96792" wrapText="true">
+                                          <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Автор" textFill="#c96792" wrapText="true">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -166,7 +192,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Label>
-                                          <Label fx:id="NovelTitle1211" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Geul Jengi S" textFill="#d384a9">
+                                          <Label fx:id="NovelAuthor" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Geul Jengi S" textFill="#d384a9">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -178,7 +204,7 @@
                                     </VBox>
                                     <VBox prefHeight="59.0" prefWidth="135.0">
                                        <children>
-                                          <Label fx:id="NovelTitle111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Статус" textFill="#c96792" wrapText="true">
+                                          <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Статус" textFill="#c96792" wrapText="true">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -186,7 +212,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Label>
-                                          <Label fx:id="NovelTitle12111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Онгоинг" textFill="#d384a9">
+                                          <Label fx:id="NovelStatus" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Онгоинг" textFill="#d384a9">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -198,7 +224,7 @@
                                     </VBox>
                                     <VBox prefHeight="49.0" prefWidth="135.0">
                                        <children>
-                                          <Label fx:id="NovelTitle1111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Тип" textFill="#c96792" wrapText="true">
+                                          <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Тип" textFill="#c96792" wrapText="true">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -206,7 +232,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Label>
-                                          <Label fx:id="NovelTitle121111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Корея" textFill="#d384a9">
+                                          <Label fx:id="NovelType" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Корея" textFill="#d384a9">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -222,7 +248,7 @@
                                  <children>
                                     <VBox prefHeight="59.0" prefWidth="159.0">
                                        <children>
-                                          <Label fx:id="NovelTitle111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Жанр" textFill="#c96792" wrapText="true">
+                                          <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Жанр" textFill="#c96792" wrapText="true">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -230,7 +256,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Label>
-                                          <Label fx:id="NovelTitle12111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Фэнтези " textFill="#d384a9">
+                                          <Label fx:id="NovelGenre" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="Фэнтези " textFill="#d384a9">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -242,7 +268,7 @@
                                     </VBox>
                                     <VBox prefHeight="59.0" prefWidth="135.0">
                                        <children>
-                                          <Label fx:id="NovelTitle1111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Выпуск" textFill="#c96792" wrapText="true">
+                                          <Label alignment="TOP_LEFT" ellipsisString=".." prefHeight="17.0" prefWidth="70.0" text="Выпуск" textFill="#c96792" wrapText="true">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>
@@ -250,7 +276,7 @@
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
                                           </Label>
-                                          <Label fx:id="NovelTitle121111" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="2021 г." textFill="#d384a9">
+                                          <Label fx:id="NovelYear" alignment="TOP_LEFT" ellipsisString=".." prefHeight="47.0" prefWidth="181.0" text="2021 г." textFill="#d384a9">
                                              <font>
                                                 <Font name="Arial Black" size="12.0" />
                                              </font>

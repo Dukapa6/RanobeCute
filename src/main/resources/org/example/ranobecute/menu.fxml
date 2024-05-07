@@ -2,10 +2,8 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -64,135 +62,9 @@
             </HBox>
             </children>
         </AnchorPane>
-      <AnchorPane accessibleRole="SCROLL_PANE" layoutX="-16.0" layoutY="412.0" prefHeight="255.0" prefWidth="725.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10px;">
-         <children>
-            <Label ellipsisString=".." layoutX="14.0" layoutY="193.0" prefHeight="35.0" prefWidth="120.0" text="Принц Демонов отправляется в Академию (Новелла)" textFill="#c96792" wrapText="true">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label layoutX="14.0" layoutY="228.0" text="Корея" textFill="#d384a9">
-               <font>
-                  <Font name="Arial Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <ImageView fitHeight="170.0" fitWidth="120.0" layoutX="15.0" layoutY="14.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../ranobeimg/The-Demon-Prince-goes-to-the-Academy.jpeg" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <viewport>
-                  <Rectangle2D width="3.0" />
-               </viewport>
-            </ImageView>
-            <ImageView fitHeight="170.0" fitWidth="120.0" layoutX="160.0" layoutY="14.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../ranobeimg/Class_de_2-ban_Me_ni_Kawaii_Onna_no_Ko_to_Tomodachi_ni_Natta_LN_volume_1.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fitHeight="170.0" fitWidth="120.0" layoutX="303.0" layoutY="14.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../ranobeimg/Kurasu-no-Daikiraina-Joshi-to-Kekkon-Suru-Koto-ni-Natta.jpg" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fitHeight="170.0" fitWidth="120.0" layoutX="445.0" layoutY="14.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../ranobeimg/Bottom_Tier_Character_Tomozaki_Kun_Visual_2.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <ImageView fitHeight="170.0" fitWidth="120.0" layoutX="590.0" layoutY="14.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../../../ranobeimg/oregairu.jpg" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
-            <Label ellipsisString=".." layoutX="160.0" layoutY="193.0" prefHeight="35.0" prefWidth="120.0" text="Я подружился со второй самой привлекательной девушкой в моем классе (WN) (Новелла)" textFill="#c96792" wrapText="true">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label layoutX="160.0" layoutY="228.0" text="Япония" textFill="#d384a9">
-               <font>
-                  <Font name="Arial Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label ellipsisString=".." layoutX="303.0" layoutY="193.0" prefHeight="35.0" prefWidth="120.0" text="Я женился на однокласснице, которую ненавидел (Новелла)" textFill="#c96792" wrapText="true">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label layoutX="303.0" layoutY="228.0" text="Япония" textFill="#d384a9">
-               <font>
-                  <Font name="Arial Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label ellipsisString=".." layoutX="445.0" layoutY="193.0" prefHeight="35.0" prefWidth="120.0" text="Низкоуровневый персонаж Томозаки-кун (Новелла)" textFill="#c96792" wrapText="true">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label layoutX="445.0" layoutY="228.0" text="Япония" textFill="#d384a9">
-               <font>
-                  <Font name="Arial Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label ellipsisString=".." layoutX="590.0" layoutY="193.0" prefHeight="35.0" prefWidth="120.0" text="Розовая пора моей школьной жизни сплошной обман (LN) (Новелла)" textFill="#c96792" wrapText="true">
-               <font>
-                  <Font name="Arial Black" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-            <Label layoutX="590.0" layoutY="228.0" text="Япония" textFill="#d384a9">
-               <font>
-                  <Font name="Arial Bold" size="12.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Label>
-         </children></AnchorPane>
       <ScrollPane layoutX="38.0" layoutY="79.0" prefHeight="260.0" prefWidth="725.0" style="-fx-background-color: transparent; -fx-background-radius: 10;" vbarPolicy="NEVER" vmax="0.0">
          <content>
-            <HBox fx:id="CardLayoout" prefHeight="260.0" prefWidth="948.0" spacing="15.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10;">
+            <HBox fx:id="CardLayoout" prefHeight="260.0" prefWidth="996.0" spacing="15.0" style="-fx-background-color: #ffdef1; -fx-background-radius: 10;">
                <padding>
                   <Insets left="20.0" />
                </padding></HBox>
